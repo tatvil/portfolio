@@ -8,7 +8,6 @@ namespace Portafolio.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.Edad = 99;
             return View();
         }
 
