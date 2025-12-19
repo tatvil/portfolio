@@ -42,7 +42,7 @@ html, body {
     height: 140px;
     border-radius: 20%; /* Estilo 'squircle' moderno */
     object-fit: cover;
-    border: 2px solid var(--keyword);
+    border: 2px solid var(--border-editor);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
@@ -73,10 +73,10 @@ html, body {
     transition: all 0.2s;
 }
 
-    .contacto-code-style a:hover {
-        color: var(--keyword) !important;
-        text-decoration: underline !important;
-    }
+.contacto-code-style a:hover {
+    color: var(--keyword) !important;
+    text-decoration: underline !important;
+}
 
 /* 6. LÍNEA LATERAL DEL EDITOR (RenderBody) */
 .border-start.border-primary {
@@ -107,9 +107,9 @@ html, body {
     font-size: 1rem;
 }
 
-    .section-title:hover {
-        background-color: #3c3c3c;
-    }
+.section-title:hover {
+    background-color: #3c3c3c;
+}
 
 .section-content {
     padding: 0 1rem;
@@ -119,11 +119,11 @@ html, body {
     background-color: var(--bg-vs);
 }
 
-    /* Clase que añade el JS para abrir el acordeón */
-    .section-content.is-visible {
-        padding: 1.5rem;
-        max-height: 1000px;
-    }
+/* Clase que añade el JS para abrir el acordeón */
+.section-content.is-visible {
+    padding: 1.5rem;
+    max-height: 1000px;
+}
 
 /* 8. BARRAS DE PROGRESO (Skills) */
 .progress-bar-container {

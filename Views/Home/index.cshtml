@@ -1,12 +1,78 @@
 ﻿@{
-    ViewData["Title"] = "Portafolio de Tatiana Villa";
+    ViewData["Title"] = "Tatiana Villa - Dev";
+
+    // Cambia estos números por tu fecha real de nacimiento
+    var fechaNacimiento = new DateTime(1971, 4, 8); // Año, Mes, Día
+    var hoy = DateTime.Today;
+    var edad = hoy.Year - fechaNacimiento.Year;
+
+    // Ajuste por si aún no ha pasado tu cumpleaños este año
+    if (fechaNacimiento.Date > hoy.AddYears(-edad)) edad--;
 }
 
-<div class="container">
-    <main role="main" class="pb-3">
-        <main role="main" class="pb-3">
-   
+<div class="main-content">
+    <p class="text-success h5" style="font-family: 'Consolas', monospace;">
+        /** <br>
+        * ¡Hola! Soy Tatiana Villa Ema <br>
+        * Desarrolladora Full Stack con base en Las Rozas de Madrid. <br>
+        */
+    </p>
 
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <h3 class="text-primary">&lt;story&gt;</h3>
+            <p>
+                Soy una desarrolladora con amplia experiencia en soluciones tecnológicas.
+                Mi perfil es un híbrido entre la **administración de sistemas Unix** y el
+                **desarrollo de aplicaciones multiplataforma**.
+            </p>
+            <p>
+                Como madre de tres y con @edad años, la organización, la resolución de problemas y la
+                autodisciplina son parte de mi "código fuente". Actualmente estoy
+                expandiendo mi stack tecnológico con nuevas herramientas de DevOps y Cloud.
+            </p>
+            <h3 class="text-primary">&lt;/story&gt;</h3>
+        </div>
 
+        <div class="col-md-4">
+            <div class="card bg-dark border-secondary p-3">
+                <h5 class="text-info">// Learning_Now</h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2 text-light">
+                        <span class="text-success">▶</span> C# .NET Core
+                        <div class="progress mt-1" style="height: 4px; background-color: #3e3e42;">
+                            <div class="progress-bar bg-primary" style="width: 45%"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </div>
 
+    <div class="mt-5">
+        <h2 class="text-success">// Proyectos_Destacados.exe</h2>
+        <div class="row mt-3">
+            <div class="col-md-4 mb-3">
+                <div class="section-cv p-3 h-100">
+                    <h5 class="text-primary">Bullet Journal App</h5>
+                    <p class="small">App móvil para gestión de tareas y calendario diario.</p>
+                    <span class="badge bg-secondary">Android</span> <span class="badge bg-secondary">Java</span>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="section-cv p-3 h-100">
+                    <h5 class="text-primary">Gestión de Redes</h5>
+                    <p class="small">Diseño y administración de redes departamentales complejas.</p>
+                    <span class="badge bg-secondary">Networking</span> <span class="badge bg-secondary">Unix</span>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="section-cv p-3 h-100">
+                    <h5 class="text-primary">Energía Solar FV</h5>
+                    <p class="small">Organización de proyectos fotovoltaicos y automatización con Arduino.</p>
+                    <span class="badge bg-secondary">Robótica</span> <span class="badge bg-secondary">IoT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
