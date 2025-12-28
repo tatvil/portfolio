@@ -36,40 +36,6 @@ namespace Portafolio.Controllers
             return View();
         }
 
-        private readonly IEmailSender _emailSender;
-
-        public HomeController(IEmailSender emailSender)
-        {
-            _emailSender = emailSender;
-        }
-
-        [HttpGet]
-        public IActionResult Hablamos()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Contacto (string Nombre, string Email, string Mensaje)
-        {
-            string contenido =
-                    $@"Nuevo mensaje desde el portfolio:
-
-                    Nombre: {Nombre}
-                    Email: {Email}
-
-                    Mensaje:
-                    {Mensaje}
-                    ";
-
-            await _emailSender.SendEmailAsync("tatiana@villaema.es", "Nuevo mensaje desde tu portfolio", contenido);
-
-            ViewBag.Enviado = true;
-            return View();
-        }
-
-        /* Ya estaba */
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

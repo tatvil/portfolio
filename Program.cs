@@ -2,8 +2,6 @@
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
-builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 
