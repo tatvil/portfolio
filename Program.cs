@@ -12,6 +12,10 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+// Indicar que la app está bajo /portfolio en el servidor VPS
+app.UsePathBase("/portfolio");
+
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
