@@ -2,11 +2,11 @@
     ViewData["Title"] = "Tatiana Villa - Dev";
 
     // Configuracion de mi fecha real de nacimiento, para calcular mi edad y visualizarla
-    var fechaNacimiento = new DateTime(1971, 12, 29); // Año, Mes, Día
+    var fechaNacimiento = new DateTime(1971, 4, 8); // Año, Mes, Día
     var hoy = DateTime.Today;
     var edad = hoy.Year - fechaNacimiento.Year;
 
-    // Ajuste por si aún no ha pasado tu cumpleaños este año
+    // Ajuste por si aún no ha pasado mi cumpleaños este año
     if (fechaNacimiento.Date > hoy.AddYears(-edad)) edad--;
 }
 
@@ -62,7 +62,7 @@
             <div class="col-md-4 mb-3">
                 <div class="section-cv p-3 h-100">
                     <h5 class="text-primary">Gestión de Redes</h5>
-                    <p class="small">Diseño y administración de redes departamentales complejas.</p>
+                    <p class="small">Diseño y administración de redes departamentales.</p>
                     <span class="badge bg-secondary">Networking</span> <span class="badge bg-secondary">Unix</span>
                 </div>
             </div>
