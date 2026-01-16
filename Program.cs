@@ -1,9 +1,20 @@
+﻿using System.Globalization;
+
+var cultureInfo = new CultureInfo("es-ES");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// Indicar que la app está bajo /portfolio en el servidor VPS
+app.UsePathBase("/portfolio");
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -13,15 +24,15 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles(); // ✅ ESTA es la forma correcta en MVC
+
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseStaticFiles();
-
-// AQUÍ EL CAMBIO: Se elimina .WithStaticAssets()
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+

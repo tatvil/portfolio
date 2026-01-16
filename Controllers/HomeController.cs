@@ -16,6 +16,21 @@ namespace Portafolio.Controllers
             return View();
         }
 
+        public IActionResult Formacion()
+        {
+            return View();
+        }
+
+        public IActionResult Experiencia()
+        {
+            return View();
+        }
+
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
