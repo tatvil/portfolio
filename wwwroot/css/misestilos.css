@@ -9,6 +9,7 @@
     --var-name: #9cdcfe; /* Azul claro (variables) */
     --text: #d4d4d4; /* Gris claro (texto normal) */
     --border-editor: #3e3e42; /* Color de bordes y líneas */
+    --tecnologias: #acb3bf;
 }
 
 /* Forzar fondo oscuro en toda la web */
@@ -138,6 +139,12 @@ html, body {
     background-color: var(--keyword);
     box-shadow: 0 0 10px rgba(86, 156, 214, 0.3);
     transition: width 1s ease-in-out;
+}
+
+.card-tecnologia {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--tecnologias) !important;
 }
 
 /* 9. FOOTER */
